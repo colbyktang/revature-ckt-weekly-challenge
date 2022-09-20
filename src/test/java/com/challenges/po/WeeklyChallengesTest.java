@@ -1,7 +1,17 @@
-package src;
+package com.challenges.po;
 
-public class Main {
-    public static void main(String[] args) {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+public class WeeklyChallengesTest {
+
+    @Test
+    public void challengeTest() {
         System.out.println("Find largest gap in array results: ");
         Integer[] arr1 = {3, 10, 6, 7};
         int result1 = WeeklyChallenge.FindLargestGapInArray(arr1);
