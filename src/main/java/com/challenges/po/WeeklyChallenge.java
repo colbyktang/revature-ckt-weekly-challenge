@@ -81,21 +81,14 @@ public class WeeklyChallenge {
         Write a program that accepts sets of three numbers and prints the second-maximum number among the three.
 
         Input
-
-            
         First line contains the number of triples, N.
-            
         The next N lines which follow each have three space separated integers.
 
         Output
         For each of the N triples, output one new line which contains the second-maximum integer among the three.
 
         Constraints
-
-
-            
         1 ≤ N ≤ 6
-            
         1 ≤ every integer ≤ 10000
             
         The three integers in a single triplet are all distinct. That is, no two of them are equal.
@@ -109,30 +102,38 @@ public class WeeklyChallenge {
         2
         10
         500
-        =========================================
+    */
+    public static void secondMaximumNumber (int n, int[][] sets) {
+        // for each set
+        for (int[] set : sets) {
+            // sort the array
+            for (int i = 0; i < 2; i++) {
+                for (int j = 0; j < 2 - i; j++) {
+                    if (set[j] > set[j+1]) {
+                        int temp = set[j];
+                        set[j] = set[j+1];
+                        set[j+1] = temp;
+                    }
+                }
+            }
+
+            System.out.println(set[1]);
+        }
+
+    }
+    /*
         Problem statement
         Given an alphanumeric string made up of digits and lower case Latin characters only, find the sum of all the digit characters in the string.
 
         Input
-
-
-            
         The first line of the input contains an integer T denoting the number of test cases. Then T test cases follow.
-            
         Each test case is described with a single line containing a string S, the alphanumeric string.
 
         Output
-
-
-            
         For each test case, output a single line containing the sum of all the digit characters in that string.
 
         Constraints
-
-
-            
         1 ≤ T ≤ 1000
-            
         1 ≤ |S| ≤ 1000, where |S| is the length of the string S.
 
         Example
@@ -142,4 +143,15 @@ public class WeeklyChallenge {
         Output:
         7
      */
+    public static void printSumOfDigits (int n, String[] stringInputs) {
+        for (String input : stringInputs) {
+            int sum = 0;
+            for (char ch : input.toCharArray()) {
+                if (Character.isDigit(ch)) {
+                    sum += Integer.parseInt(String.valueOf(ch));
+                }
+            }
+            System.out.println(sum);
+        }
+    }
 }

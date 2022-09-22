@@ -38,4 +38,36 @@ public class WeeklyChallengesTest {
         String reversedString = WeeklyChallenge.reverseString(testString);
         System.out.println(reversedString);
     }
+
+    /*
+        Sample Input
+        3
+        1 2 3
+        10 15 5
+        100 999 500
+
+        Sample Output
+        2
+        10
+        500
+     */
+    @Test
+    void SecondMaximumNumber () {
+        int[][] arr = {{1,2,3},{10,15,5},{100,999,500}};
+        WeeklyChallenge.secondMaximumNumber(3, arr);
+    }
+
+    /**
+        Example
+        Input:
+        1
+        ab1231da
+        Output:
+        7
+     */
+    @Test
+    void printSumOfDigits () {
+        String[] stringInputs = {"ab1231da"};
+        WeeklyChallenge.printSumOfDigits(1, stringInputs);
+    }
 }
