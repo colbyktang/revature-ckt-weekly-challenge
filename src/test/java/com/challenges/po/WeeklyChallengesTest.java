@@ -54,7 +54,7 @@ public class WeeklyChallengesTest {
     @Test
     void SecondMaximumNumber () {
         int[][] arr = {{1,2,3},{10,15,5},{100,999,500}};
-        WeeklyChallenge.secondMaximumNumber(3, arr);
+        WeeklyChallenge_0922.secondMaximumNumber(3, arr);
     }
 
     /**
@@ -68,6 +68,6 @@ public class WeeklyChallengesTest {
     @Test
     void printSumOfDigits () {
         String[] stringInputs = {"ab1231da"};
-        WeeklyChallenge.printSumOfDigits(1, stringInputs);
+        WeeklyChallenge_0922.printSumOfDigits(1, stringInputs);
     }
 }
