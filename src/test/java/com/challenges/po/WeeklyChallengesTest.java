@@ -70,4 +70,9 @@ public class WeeklyChallengesTest {
         String[] stringInputs = {"ab1231da"};
         WeeklyChallenge_0922.printSumOfDigits(1, stringInputs);
     }
+
+    @Test
+    void getLargestGap () {
+        
+    }
 }
