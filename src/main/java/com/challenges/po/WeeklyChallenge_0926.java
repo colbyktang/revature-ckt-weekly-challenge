@@ -20,11 +20,11 @@ public class WeeklyChallenge_0926 {
 
     ... so that we now see that the largest gap in the array is between 9 and 20 which is 11.
      */
-    public int findLargestGap (int[] arr) {
+    public static int findLargestGap (int[] arr) {
         int n = arr.length;
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < i - 1; j++) {
+            for (int j = 0; j < n - i - 1; j++) {
                 if (arr[j] > arr[j+1]) {
                     int temp = arr[j];
                     arr[j] = arr[j+1];

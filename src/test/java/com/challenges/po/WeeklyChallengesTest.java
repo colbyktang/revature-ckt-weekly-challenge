@@ -73,6 +73,8 @@ public class WeeklyChallengesTest {
 
     @Test
     void getLargestGap () {
-        
+        int[] arr = {10,6,3,5}; // should output 4 from 10 - 6
+        int result = WeeklyChallenge_0926.findLargestGap(arr);
+        System.out.println(result);
     }
 }
