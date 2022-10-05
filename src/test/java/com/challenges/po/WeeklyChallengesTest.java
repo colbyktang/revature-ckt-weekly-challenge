@@ -77,4 +77,20 @@ public class WeeklyChallengesTest {
         int result = WeeklyChallenge_0926.findLargestGap(arr);
         System.out.println(result);
     }
+
+    @Test
+    void isPinCode () {
+        String testString = "1234";
+        String testString2 = "12345";
+        String testString3 = "45135";
+        String testString4 = "89abc1";
+        String testString5 = "900876";
+        String testString6 = " 4983";
+        assertEquals(true, WeeklyChallenge_1003.isPinCode(testString));
+        assertEquals(false, WeeklyChallenge_1003.isPinCode(testString2));
+        assertEquals(false, WeeklyChallenge_1003.isPinCode(testString3));
+        assertEquals(false, WeeklyChallenge_1003.isPinCode(testString4));
+        assertEquals(true, WeeklyChallenge_1003.isPinCode(testString5));
+        assertEquals(false, WeeklyChallenge_1003.isPinCode(testString6));
+    }
 }
